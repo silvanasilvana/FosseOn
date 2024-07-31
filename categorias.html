@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .blog-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Ajusta el espacio entre los elementos como desees */
+        }
+
+        .blog-1 img {
+            width: 100%;
+            height: 200px; /* Altura fija para las imágenes */
+            object-fit: cover; /* Asegura que las imágenes se recorten para llenar el contenedor */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header"> 
+        <div class="menu container"> 
+            <img src="images/logo.png" class="menu-logo" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html"> Inicio </a></li>
+                    <li><a href="categorias.html"> Categorias </a></li>
+                    <li><a href="carrito.html"> Carrito </a></li>
+                    <li><a href=""> Contacto </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <h1>Categorias</h1>
+        </div>
+    </header>
+    
+    <section class="blog container">
+        <div class="blog-content"> 
+            <div class="blog-1"> 
+                <a href="target.html">
+                    <img src="images/target.png" alt="">
+                    <h3>Target</h3>
+                </a>
+            </div>
+    
+            <div class="blog-1"> 
+                <a href="costco.html">
+                    <img src="images/costco.jpg" alt="">
+                    <h3>Costco</h3>
+                </a>
+            </div>
+    
+            <div class="blog-1"> 
+                <a href="ulta.html">
+                    <img src="images/ulta.png" alt="">
+                    <h3>Ulta Beauty</h3>
+                </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="lululemon.html">
+                    <img src="images/lulu.jpg" alt="">
+                    <h3>LuluLemon</h3>
+                </a>
+            </div>
+
+          
+
+            <div class="blog-1"> 
+                <a href="northface.html">
+                    <img src="images/North.png" alt="">
+                    <h3>The North Face</h3>
+                </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="newbalance.html">
+                    <img src="images/New.png" alt="">
+                    <h3>New Balance</h3>
+                </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="jordan.html">
+                    <img src="images/jordan.jpg" alt="">
+                    <h3>Jordan</h3>
+                </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="candys.html">
+                    <img src="images/dulces.JPG" alt="">
+                    <h3>Dulces Usa</h3>
+                </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="healthy.html">
+                    <img src="images/healthy.JPG" alt="">
+                    <h3>Healthy Snacks</h3>
+                </a>
+            </div>
+
+            
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Whatsapp</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

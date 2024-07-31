@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrito</title>
+    <link rel="stylesheet" href="lululemon.css">
+    <style>
+        .blog-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Ajusta el espacio entre los elementos como desees */
+        }
+
+        .blog-1 img {
+            width: 100%;
+            height: 200px; /* Altura fija para las imágenes */
+            object-fit: cover; /* Asegura que las imágenes se recorten para llenar el contenedor */
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header"> 
+        <div class="menu container"> 
+            <img src="images/logo.png" class="menu-logo" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html"> Inicio </a></li>
+                    <li><a href="categorias.html"> Categorias </a></li>
+                    <li><a href="carrito.html"> Carrito </a></li>
+                    <li><a href=""> Contacto </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="blog container">
+        <div class="blog-content"> 
+           
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/1.JPG" alt="product image"></a>
+    
+                    <h1> $98 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/2.JPG" alt="product image"></a>
+    
+                    <h1> $98 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/3.JPG" alt="product image"></a>
+    
+                    <h1> $98 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/4.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/5.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/6.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/7.JPG" alt="product image"></a>
+    
+                    <h1> $88 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/8.JPG" alt="product image"></a>
+    
+                    <h1> $88 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/9.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/10.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/11.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/12.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/13.JPG" alt="product image"></a>
+    
+                    <h1> $79 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/14.JPG" alt="product image"></a>
+    
+                    <h1> $49 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/15.JPG" alt="product image"></a>
+    
+                    <h1> $88 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/16.JPG" alt="product image"></a>
+    
+                    <h1> $88 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/17.JPG" alt="product image"></a>
+    
+                    <h1> $79 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/19.JPG" alt="product image"></a>
+    
+                    <h1> $78 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/18.JPG" alt="product image"></a>
+    
+                    <h1> $39 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/20.JPG" alt="product image"></a>
+    
+                    <h1> $64 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/21.JPG" alt="product image"></a>
+    
+                    <h1> $64 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/22.JPG" alt="product image"></a>
+    
+                    <h1> $49 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/23.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/24.JPG" alt="product image"></a>
+    
+                    <h1> $64 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/25.JPG" alt="product image"></a>
+    
+                    <h1> $64 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/26.JPG" alt="product image"></a>
+    
+                    <h1> $64 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/27.JPG" alt="product image"></a>
+    
+                    <h1> $64 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/28.JPG" alt="product image"></a>
+    
+                    <h1> $68 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/29.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/30.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/31.JPG" alt="product image"></a>
+    
+                    <h1> $68 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/32.JPG" alt="product image"></a>
+    
+                    <h1> $68 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/33.JPG" alt="product image"></a>
+    
+                    <h1> $68 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/34.JPG" alt="product image"></a>
+    
+                    <h1> $68 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/35.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/36.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/37.JPG" alt="product image"></a>
+    
+                    <h1> $49 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/38.JPG" alt="product image"></a>
+    
+                    <h1> $49 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/39.JPG" alt="product image"></a>
+    
+                    <h1> $48 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/40.JPG" alt="product image"></a>
+    
+                    <h1> $39 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/41.JPG" alt="product image"></a>
+    
+                    <h1> $39 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/42.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/43.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/44.JPG" alt="product image"></a>
+    
+                    <h1> $58 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/45.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/46.JPG" alt="product image"></a>
+    
+                    <h1> $118 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/47.JPG" alt="product image"></a>
+    
+                    <h1> $14 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/48.JPG" alt="product image"></a>
+    
+                    <h1> $18 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/49.JPG" alt="product image"></a>
+    
+                    <h1> $48 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/50.JPG" alt="product image"></a>
+    
+                    <h1> $48 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/51.JPG" alt="product image"></a>
+    
+                    <h1> $48 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+            <div class="blog-1"> 
+                <a href="categorias.html">
+                    <img src="lululemon/52.JPG" alt="product image"></a>
+    
+                    <h1> $48 dllrs </h1>
+                    <a href="#" class="btn-1" data-price="30" data-image="target/stanley1.JPG"> Agregar a carrito </a>
+            </div>
+
+
+
+            
+
+           
+
+
+
+           
+
+            
+           
+          
+           
+
+         
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3> Lorem</h3>
+                <ul>
+                    <li> <a href="#"> Whatsapp</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3> Lorem</h3>
+                <ul>
+                    <li> <a href="#"> Nosotros </
+                        a></li>
+                    </ul>
+                </div>
+    
+                <div class="link">
+                    <h3> Lorem</h3>
+                    <ul>
+                        <li> <a href="#"> Instagram </a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    
+        <div class="notification" id="notification">Producto agregado</div>
+    
+        <script>
+            const addToCartButtons = document.querySelectorAll('.btn-1');
+            const notification = document.getElementById('notification');
+    
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    
+                    const price = event.target.getAttribute('data-price');
+                    const image = event.target.getAttribute('data-image');
+    
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+                    let existingItem = cartItems.find(item => item.image === image);
+    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cartItems.push({ image, price, quantity
+                            : 1 });
+                        }
+                        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            showNotification();
+        });
+    });
+
+    function showNotification() {
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 2000); // El mensaje se oculta después de 2 segundos
+    }
+</script>
+</body>
+</html>    

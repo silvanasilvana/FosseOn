@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .cart-item div {
+            flex-grow: 1;
+        }
+
+        .cart-item .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item button {
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+
+        .fa-trash-alt {
+            color: red;
+            cursor: pointer;
+        }
+
+        #total, #iva, #total-amount {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .continue-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .continue-button {
+            width: 200px;
+            padding: 10px;
+            background-color: #b3a49d;
+            color: #F9FAFC;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+
+        .continue-button:hover {
+            background-color: #C5C5C5;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <img src="images/logo.png" class="menu-logo" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cart container">
+        <h1>Tu Carrito</h1>
+        <div id="cart-items"></div>
+        <div id="total"></div> <!-- Aquí se mostrará el total -->
+        <div id="iva"></div> <!-- Aquí se mostrará el IVA -->
+        <div id="total-amount"></div> <!-- Aquí se mostrará la cantidad total -->
+        <div class="continue-button-container">
+            <button class="continue-button" onclick="continueShopping()">Comprar</button>
+        </div>
+    </section>
+
+    <script>
+        function removeItem(index) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            renderCartItems();
+        }
+
+        function calculateTotal() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let total = 0;
+            cartItems.forEach(item => {
+                total += item.price * item.quantity;
+            });
+            return total;
+        }
+
+        function calculateIVA(total) {
+            return total * 0.15;
+        }
+
+        function renderCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total');
+            const ivaElement = document.getElementById('iva');
+            const totalAmountElement = document.getElementById('total-amount');
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            cartItemsContainer.innerHTML = '';
+
+            cartItems.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="product image">
+                    <div>
+                        <p>Price: $${item.price} dllrs</p>
+                        <div class="quantity-controls">
+                            <button class="decrement" data-index="${index}">-</button>
+                            <span>Quantity: ${item.quantity}</span>
+                            <button class="increment" data-index="${index}">+</button>
+                            <i class="fas fa-trash-alt" onclick="removeItem(${index})"></i>
+                        </div>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+
+            const total = calculateTotal();
+            const iva = calculateIVA(total);
+            const totalAmount = total + iva;
+
+            totalElement.innerHTML = `Precio: $${total.toFixed(2)} dllrs`;
+            ivaElement.innerHTML = `IVA: $${iva.toFixed(2)} dllrs`;
+            totalAmountElement.innerHTML = `Total: $${totalAmount.toFixed(2)} dllrs`;
+
+            document.querySelectorAll('.increment').forEach(button => {
+                button.addEventListener('click', event => {
+                    const index = event.target.getAttribute('data-index');
+                    incrementQuantity(index);
+                });
+            });
+
+            document.querySelectorAll('.decrement').forEach(button => {
+                button.addEventListener('click', event => {
+                    const index = event.target.getAttribute('data-index');
+                    decrementQuantity(index);
+                });
+            });
+        }
+
+        function incrementQuantity(index) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems[index].quantity += 1;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            renderCartItems();
+        }
+
+        function decrementQuantity(index) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity -= 1;
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                renderCartItems();
+            } else {
+                cartItems = cartItems.filter((item, i) => i !== parseInt(index));
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                renderCartItems();
+            }
+        }
+
+        function generateWhatsAppMessage() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let total = calculateTotal();
+            let iva = calculateIVA(total);
+            let totalAmount = total + iva;
+
+            let message = "Detalles de mi compra:\n\n";
+            cartItems.forEach(item => {
+                message += `- Producto: ${item.name}\n`;
+                message += `  Cantidad: ${item.quantity}\n`;
+                message += `  Precio: $${item.price}\n`;
+                message += `  Imagen: ${item.image}\n\n`;
+            });
+            message += `Total: $${total.toFixed(2)} dllrs\n`;
+            message += `IVA: $${iva.toFixed(2)} dllrs\n`;
+            message += `Total con IVA: $${totalAmount.toFixed(2)} dllrs`;
+
+            return encodeURIComponent(message);
+        }
+
+        function continueShopping() {
+            let message = generateWhatsAppMessage();
+            let phoneNumber = '528715840482'; // Número de teléfono sin espacios ni caracteres especiales
+            let url = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(url, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCartItems);
+    </script>
+</body>
+</html>
