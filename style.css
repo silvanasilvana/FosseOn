@@ -1,41 +1,38 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: none;
     list-style: none;
 }
 
-body{
-   font-family: 'poppins', sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Previene el desbordamiento horizontal globalmente */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; /* Agrega padding para evitar el desbordamiento */
 }
 
-.header{
+.header {
     background-image: linear-gradient(
-       rgba(0,0,0,0.7),
-       rgba(0,0,0,0.7)),
-       url(images/pr1.jpg);
-       background-position: center bottom;
-       background-repeat: no-repeat;
-       background-size: cover;
-       min-height: 70vh;
-       display: flex;
-       align-items: center;
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url(images/pr1.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative; /* Añadido para el correcto posicionamiento de los elementos hijos */
 }
 
-
-
-
-
-.menu{
+.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -43,79 +40,50 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 15px; /* Asegura que el contenido no toque los bordes */
 }
-
-.logo{
-    
-    margin-left: 70px; 
-
-
-}
-
 
 .menu-logo {
     width: 150px; /* Ajusta el tamaño del logo del menú según lo necesites */
 }
 
-
-
-
-
-
-.menu .navbar ul li{
+.menu .navbar ul li {
     position: relative;
     float: left;
 }
 
-
-
-.menu .navbar ul li a{
-  font-size: 18px;
-  padding: 20px;
-  color: #C5C5C5;
-  display: block;
-  font-weight: 600;
-
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #C5C5C5;
+    display: block;
+    font-weight: 600;
 }
 
-
-
-
-
-.menu .navbar ul li a:hover{
+.menu .navbar ul li a:hover {
     color: #9f867a;
 }
-  
-
 
 #menu {
     display: none;
 }
 
-.menu-icono{
+.menu-icono {
     width: 20px;
     margin-left: 10px;
-    align-items: left;
 }
 
-
-
-
-
-
-
-.menu label{
+.menu label {
     cursor: pointer;
-    position: absolute;
     display: none;
 }
 
-
-.header-content{
+.header-content {
     text-align: center;
+    padding: 0 15px; /* Agrega padding para evitar el desbordamiento */
 }
 
-.header-content h1{
+.header-content h1 {
     font-size: 75px;
     line-height: 80px;
     color: #F9FAFC;
@@ -127,8 +95,8 @@ body{
 .header-content p {
     font-size: 16px;
     color: #C5C5C5;
-    padding: 0 250px;
     margin-bottom: 25px;
+    max-width: 100%; /* Evita el desbordamiento del texto */
 }
 
 .btn-1 {
@@ -137,32 +105,20 @@ body{
     background-color: #b3a49d;
     color: #F9FAFC;
     text-transform: uppercase;
+    text-align: center;
+    text-decoration: none; /* Asegura que el enlace no tenga subrayado */
 }
 
-.btn-1:hover{
+.btn-1:hover {
     background-color: #C5C5C5;
 }
 
-
-
-
-
-
-
-
-
-
-
 .coffee {
-    padding: 100px 0;
+    padding: 100px 15px; /* Agrega padding para evitar el desbordamiento */
     background-color: #dfd6c5;
     background-size: cover;
     position: relative;
-    width: 100%; /* Asegura que la sección tome todo el ancho disponible */
-    min-height: 100vh; /* Asegura que la sección cubra al menos la altura completa de la ventana */
-    margin: 0; /* Elimina cualquier margen adicional */
 }
-
 
 .coffee-content {
     text-align: center;
@@ -173,68 +129,59 @@ body{
     line-height: 70px;
     color: #323232;
     text-transform: uppercase;
-    padding: 0 250px;
     margin-bottom: 15px;
 }
 
-.txt-p{
+.txt-p {
     font-size: 16px;
     color: #414247;
-    padding: 0 250px;
     margin-bottom: 35px;
+    max-width: 100%; /* Evita el desbordamiento del texto */
 }
 
-.coffee-group{
+.coffee-group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     margin-bottom: 50px;
 }
 
-
 .coffee-1 {
-    padding: 0 25px;
+    padding: 0 15px; /* Ajusta el padding para evitar el desbordamiento */
+    flex: 1; /* Permite que los elementos se ajusten en el contenedor */
+    min-width: 280px; /* Evita que los elementos sean demasiado pequeños */
 }
 
-.coffee-1 img{
-    width: 280px;
-    object-fit: cover;
+.coffee-1 img {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.coffee-img{
+.coffee-img {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-
-.coffee-1 h3{
-  color: #323337;
-  font-size: 20px;
-  margin-bottom: 15px;
+.coffee-1 h3 {
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-
-
-
-
-
-
-
-
-
 .services {
-  background-image: linear-gradient(
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)),
-    url(images/fondo2.jpg);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url(images/fondo2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 100px 0;
+    padding: 100px 15px; /* Agrega padding para evitar el desbordamiento */
 }
 
-.services-content{
+.services-content {
     text-align: center;
 }
 
@@ -246,170 +193,119 @@ body{
     margin-bottom: 50px;
 }
 
-.services-content p{
+.services-content p {
     font-size: 16px;
     color: #C5C5C5;
-    padding: 0 100px;
     margin-bottom: 50px;
-    
+    max-width: 100%; /* Evita el desbordamiento del texto */
 }
 
-.services-group{
+.services-group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     margin-bottom: 30px;
-    
 }
 
-.services-1{
-    padding: 0 100px;
+.services-1 {
+    padding: 0 15px; /* Ajusta el padding para evitar el desbordamiento */
+    flex: 1; /* Permite que los elementos se ajusten en el contenedor */
+    min-width: 150px; /* Evita que los elementos sean demasiado pequeños */
 }
 
-.services-1 img{
+.services-1 img {
     width: 50px;
     margin-bottom: 15px;
-    margin-top: 80;
 }
 
-.services-1 h3{
+.services-1 h3 {
     color: #ffffff;
     font-size: 18px;
 }
 
-
-
-
-
-
-
-
 .general {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
-.general-1{
+.general-1 {
     width: 50%;
-    padding: 100px 250px 100px 100px;
+    padding: 100px 15px; /* Ajusta el padding para evitar el desbordamiento */
     background-color: #dfd6c5;
 }
 
-.general-2{
+.general-2, .general-3 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-2 {
     background-image: url(images/coffe-1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-
 }
 
-.general-3{
+.general-3 {
     background-image: url(images/coffee-2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
 }
 
-.h2{
-    font-size: 55px;
-    line-height: 70px;
-    color: #414247;
-    margin: 25px 0 45px 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.blog{
-    padding: 100px 0;
+.blog {
+    padding: 100px 15px; /* Agrega padding para evitar el desbordamiento */
     text-align: center;
 }
 
-.blog-content{
-display: flex;
-justify-content: space-between;
+.blog-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
-.blog-1{
-    padding: 15px 55px;
+.blog-1 {
+    padding: 15px;
+    flex: 1; /* Permite que los elementos se ajusten en el contenedor */
+    min-width: 250px; /* Evita que los elementos sean demasiado pequeños */
 }
 
-.blog-1 img{
-   width: 250px;
-   border-radius: 15px;
-   margin-bottom: 15px;
+.blog-1 img {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    border-radius: 15px;
 }
 
-.blog-1 h3{
- font-size: 25px;
- color: #323337;
+.blog-1 h3 {
+    font-size: 25px;
+    color: #323337;
 }
 
-
-
-.footer{
-    padding: 100px 0;
+.footer {
+    padding: 100px 15px; /* Agrega padding para evitar el desbordamiento */
     background-color: #000000;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
-link h3{
+.link h3 {
     font-size: 18px;
     color: #F9FAFC;
     margin-bottom: 15px;
 }
 
-.link a{
+.link a {
     font-size: 16px;
     color: #C5C5C5;
     display: block;
     margin-bottom: 15px;
 }
 
-@media(max-width:991px){
-    .menu{
+@media (max-width: 991px) {
+    .menu {
         padding: 30px;
     }
 
-    .menu label{
+    .menu label {
         display: initial;
     }
 
@@ -417,39 +313,33 @@ link h3{
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0%;
+        right: 0;
         background-color: #323337;
         display: none;
     }
 
     .menu .navbar ul li {
-      width: 100%;
+        width: 100%;
     }
-    
-    #menu:checked ~ .navbar{
+
+    #menu:checked ~ .navbar {
         display: initial;
     }
 
-    .header-content{
-        padding: 100px 30px;
-    }
-
-    .header-content p{
-        padding: 0;
+    .header-content {
+        padding: 100px 15px; /* Ajusta el padding para pantallas pequeñas */
     }
 
     .coffee {
         padding: 30px;
     }
     
-    .coffee-content h2{
+    .coffee-content h2 {
         padding: 0;
-    
     }
     
-    .txt-p{
+    .txt-p {
         padding: 0;
-        
     }
     
     .coffee-group {
@@ -457,23 +347,19 @@ link h3{
         margin-bottom: 0;
     }
     
-    .coffee-img{
+    .coffee-img {
         display: none;
-    
     }
-    
-    
-    
-    
-    .services{
+
+    .services {
         padding: 30px;
     }
     
-    .services-content p{
+    .services-content p {
         padding: 0;
     }
     
-    .services-group{
+    .services-group {
         flex-direction: column;
         margin-bottom: 0;
         align-items: center;
@@ -482,43 +368,38 @@ link h3{
     .services-1 {
         margin-bottom: 25px;
     }
-        
-
-
-
-
-
-    .general{
+    
+    .general {
         flex-direction: column;
     }
 
-    .general-1{
+    .general-1 {
         width: 100%;
         padding: 30px;
         text-align: center;
     }
 
-    .general-2, .general-3{
+    .general-2, .general-3 {
         display: none;
     }
 
-    .blog{
-    padding: 30px;
-    }
-
-     .blog-content{
-    flex-direction: column;
-    }
-
-    .blog-1{
-        padding: 0;
-    }
-
-    .footer{
+    .blog {
         padding: 30px;
     }
 
-    .footer-content{
+    .blog-content {
+        flex-direction: column;
+    }
+
+    .blog-1 {
+        padding: 0;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
         flex-direction: column;
         text-align: center;
     }
