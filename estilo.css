@@ -89,7 +89,7 @@ body {
 }
 
 .header-content h1 {
-    font-size: 75px;
+    font-size: 2.5rem; /* Tamaño mayor */
     line-height: 80px;
     color: #F9FAFC;
     text-transform: uppercase;
@@ -176,6 +176,7 @@ body {
 }
 
 .services {
+    padding: 100px 0;
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)
@@ -184,7 +185,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 100px 0;
 }
 
 .services-content {
