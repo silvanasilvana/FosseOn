@@ -1,6 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,8 +9,8 @@
     list-style: none;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+body{
+   font-family: 'poppins', sans-serif;
 }
 
 .container {
@@ -17,21 +18,24 @@ body {
     margin: 0 auto;
 }
 
-.header {
+.header{
     background-image: linear-gradient(
-        rgba(157, 157, 157, 0.7),
-        rgba(127, 127, 127, 0.7)
-    ), url(images/categorias.jpg);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    padding: 0 20px; /* Ajuste para móviles */
+       rgba(157, 157, 157, 0.7),
+       rgba(127, 127, 127, 0.7)),
+       url(images/categorias.jpg);
+       background-position: center bottom;
+       background-repeat: no-repeat;
+       background-size: cover;
+       min-height: 70vh;
+       display: flex;
+       align-items: center;
 }
 
-.menu {
+
+
+
+
+.menu{
     position: absolute;
     top: 0;
     left: 0;
@@ -39,56 +43,79 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px; /* Ajuste para móviles */
 }
 
-.logo {
+.logo{
+    
     margin-left: 70px; 
+
+
 }
+
 
 .menu-logo {
     width: 150px; /* Ajusta el tamaño del logo del menú según lo necesites */
 }
 
-.menu .navbar ul li {
+
+
+
+
+
+.menu .navbar ul li{
     position: relative;
     float: left;
 }
 
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #C5C5C5;
-    display: block;
-    font-weight: 600;
+
+
+.menu .navbar ul li a{
+  font-size: 18px;
+  padding: 20px;
+  color: #C5C5C5;
+  display: block;
+  font-weight: 600;
+
 }
 
-.menu .navbar ul li a:hover {
+
+
+
+
+.menu .navbar ul li a:hover{
     color: #9f867a;
 }
+  
+
 
 #menu {
     display: none;
 }
 
-.menu-icono {
+.menu-icono{
     width: 20px;
     margin-left: 10px;
     align-items: left;
 }
 
-.menu label {
+
+
+
+
+
+
+.menu label{
     cursor: pointer;
     position: absolute;
     display: none;
 }
 
-.header-content {
+
+.header-content{
     text-align: center;
-    padding: 0 20px; /* Ajuste para móviles */
 }
 
-.header-content h1 {
+.header-content h1{
     font-size: 75px;
     line-height: 80px;
     color: #F9FAFC;
@@ -100,7 +127,7 @@ body {
 .header-content p {
     font-size: 16px;
     color: #C5C5C5;
-    padding: 0 250px; /* Considera ajustar esto en móviles */
+    padding: 0 250px;
     margin-bottom: 25px;
 }
 
@@ -112,9 +139,19 @@ body {
     text-transform: uppercase;
 }
 
-.btn-1:hover {
+.btn-1:hover{
     background-color: #C5C5C5;
 }
+
+
+
+
+
+
+
+
+
+
 
 .coffee {
     padding: 100px 0;
@@ -126,9 +163,9 @@ body {
     margin: 0; /* Elimina cualquier margen adicional */
 }
 
+
 .coffee-content {
     text-align: center;
-    padding: 0 20px; /* Ajuste para móviles */
 }
 
 .coffee-content h2 {
@@ -136,50 +173,60 @@ body {
     line-height: 70px;
     color: #323232;
     text-transform: uppercase;
-    padding: 0 250px; /* Considera ajustar esto en móviles */
+    padding: 0 250px;
     margin-bottom: 15px;
 }
 
-.txt-p {
+.txt-p{
     font-size: 16px;
     color: #414247;
-    padding: 0 250px; /* Considera ajustar esto en móviles */
+    padding: 0 250px;
     margin-bottom: 35px;
 }
 
-.coffee-group {
+.coffee-group{
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
 }
+
 
 .coffee-1 {
     padding: 0 25px;
 }
 
-.coffee-1 img {
+.coffee-1 img{
     width: 280px;
     object-fit: cover;
 }
 
-.coffee-img {
+.coffee-img{
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.coffee-1 h3 {
-    color: #323337;
-    font-size: 20px;
-    margin-bottom: 15px;
+
+.coffee-1 h3{
+  color: #323337;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
+
+
+
+
+
+
+
+
+
 .services {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-    ), url(images/fondo2.jpg);
+  background-image: linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+    url(images/fondo2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,9 +234,8 @@ body {
     padding: 100px 0;
 }
 
-.services-content {
+.services-content{
     text-align: center;
-    padding: 0 20px; /* Ajuste para móviles */
 }
 
 .services-content h2 {
@@ -200,55 +246,63 @@ body {
     margin-bottom: 50px;
 }
 
-.services-content p {
+.services-content p{
     font-size: 16px;
     color: #C5C5C5;
-    padding: 0 100px; /* Considera ajustar esto en móviles */
+    padding: 0 100px;
     margin-bottom: 50px;
+    
 }
 
-.services-group {
+.services-group{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
+    
 }
 
-.services-1 {
-    padding: 0 100px; /* Considera ajustar esto en móviles */
+.services-1{
+    padding: 0 100px;
 }
 
-.services-1 img {
+.services-1 img{
     width: 50px;
     margin-bottom: 15px;
-    margin-top: 80px; /* Añadido "px" */
+    margin-top: 80;
 }
 
-.services-1 h3 {
+.services-1 h3{
     color: #ffffff;
     font-size: 18px;
 }
 
+
+
+
+
+
+
+
 .general {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
 }
 
-.general-1 {
+.general-1{
     width: 50%;
     padding: 100px 250px 100px 100px;
     background-color: #dfd6c5;
 }
 
-.general-2 {
+.general-2{
     background-image: url(images/coffe-1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
+
 }
 
-.general-3 {
+.general-3{
     background-image: url(images/coffee-2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -256,27 +310,62 @@ body {
     width: 50%;
 }
 
-.h2 {
+.h2{
     font-size: 55px;
     line-height: 70px;
     color: #414247;
     margin: 25px 0 45px 0;
 }
 
-.blog {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blog{
     padding: 100px 0;
     text-align: center;
 }
 
-.blog-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
+.blog-content{
+display: flex;
+justify-content: space-between;
 }
 
-.blog-1 {
+.blog-1{
     padding: 15px 55px;
-    width: 100%; /* Ajuste para móviles */
 }
 
 .blog-1 img {
@@ -285,41 +374,43 @@ body {
     margin-bottom: 15px;
 }
 
-.blog-1 h3 {
-    font-size: 25px;
-    color: #323337;
+
+.blog-1 h3{
+ font-size: 25px;
+ color: #323337;
 }
 
-.footer {
+
+
+.footer{
     padding: 100px 0;
     background-color: #000000;
 }
 
-.footer-content {
+.footer-content{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
 }
 
-.link h3 {
+link h3{
     font-size: 18px;
     color: #F9FAFC;
     margin-bottom: 15px;
 }
 
-.link a {
+.link a{
     font-size: 16px;
     color: #C5C5C5;
     display: block;
     margin-bottom: 15px;
 }
 
-@media(max-width: 991px) {
-    .menu {
+@media(max-width:991px){
+    .menu{
         padding: 30px;
     }
 
-    .menu label {
+    .menu label{
         display: initial;
     }
 
@@ -327,97 +418,108 @@ body {
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0;
+        right: 0%;
         background-color: #323337;
         display: none;
     }
 
     .menu .navbar ul li {
-        width: 100%;
+      width: 100%;
     }
-
-    #menu:checked ~ .navbar {
+    
+    #menu:checked ~ .navbar{
         display: initial;
     }
 
-    .header-content {
+    .header-content{
         padding: 100px 30px;
     }
 
-    .header-content p {
+    .header-content p{
         padding: 0;
     }
 
     .coffee {
         padding: 30px;
     }
-
-    .coffee-content h2 {
+    
+    .coffee-content h2{
         padding: 0;
+    
     }
-
-    .txt-p {
+    
+    .txt-p{
         padding: 0;
+        
     }
-
+    
     .coffee-group {
         flex-direction: column;
         margin-bottom: 0;
     }
-
-    .coffee-img {
+    
+    .coffee-img{
         display: none;
+    
     }
-
-    .services {
+    
+    
+    
+    
+    .services{
         padding: 30px;
     }
-
-    .services-content p {
+    
+    .services-content p{
         padding: 0;
     }
-
-    .services-group {
+    
+    .services-group{
         flex-direction: column;
         margin-bottom: 0;
         align-items: center;
     }
-
+    
     .services-1 {
         margin-bottom: 25px;
     }
+        
 
-    .general {
+
+
+
+
+    .general{
         flex-direction: column;
     }
 
-    .general-1 {
+    .general-1{
         width: 100%;
         padding: 30px;
         text-align: center;
     }
 
-    .general-2, .general-3 {
+    .general-2, .general-3{
         display: none;
     }
 
-    .blog {
-        padding: 30px;
+    .blog{
+    padding: 30px;
     }
 
-    .blog-content {
-        flex-direction: column;
+     .blog-content{
+    flex-direction: column;
     }
 
-    .blog-1 {
+    .blog-1{
         padding: 0;
     }
 
-    .footer {
+    .footer{
         padding: 30px;
     }
 
-    .footer-content {
+    .footer-content{
         flex-direction: column;
         text-align: center;
     }
