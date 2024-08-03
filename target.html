@@ -19,6 +19,19 @@
             max-height: 140px; /* Altura máxima para las imágenes */
             object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortes */
         }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 1000;
+        }
     </style>
     
     
@@ -377,6 +390,7 @@
             </div>
         </footer>
     
+        
         <div class="notification" id="notification">Producto agregado</div>
     
         <script>
@@ -412,7 +426,7 @@
             notification.style.display = 'none';
         }, 2000); // El mensaje se oculta después de 2 segundos
     }
-</script>
+</script> 
 </body>
 </html>    
 

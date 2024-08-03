@@ -8,14 +8,15 @@
     <style>
         .blog-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* Cambiado de 3 a 2 columnas */
             gap: 20px; /* Ajusta el espacio entre los elementos como desees */
         }
-
+    
         .blog-1 img {
-            width: 100%;
-            height: 200px; /* Altura fija para las imágenes */
-            object-fit: cover; /* Asegura que las imágenes se recorten para llenar el contenedor */
+            width: 100%; /* Ocupa todo el ancho del contenedor */
+            height: auto; /* Ajusta la altura proporcionalmente */
+            max-height: 140px; /* Altura máxima para las imágenes */
+            object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortes */
         }
 
         .notification {
