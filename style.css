@@ -1026,13 +1026,27 @@ html {
     background-color: rgba(157, 151, 138, 0.9);
   }
 }
+
 @media (max-width: 768px) {
-  .video-header {
-    display: none !important;  /* Oculta el video en móvil */
+  .header {
+    position: relative; /* necesario para el overlay absoluto */
+
+    /* la imagen de fondo la tienes aquí */
+    background: url('images/fotointro.PNG') center center / cover no-repeat;
   }
 
-  .header {
-    background: url('images/fotointro.PNG') center center / cover no-repeat;
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* color negro semitransparente como en el video */
+    z-index: 1;
+  }
+
+  /* Asegúrate que el contenido esté arriba del overlay */
+  .header-content {
+    position: relative; /* para que quede arriba */
+    z-index: 2;
   }
 }
 
@@ -1045,4 +1059,6 @@ html {
   }
   
 }
+
+
 
